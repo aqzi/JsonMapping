@@ -2,8 +2,11 @@
   "name": "@aqzi/jsonmapping",
   "version": "1.0.0",
   "description": "Convert json to and from (nested) maps and sets",
-  "main": "src/Mapping.ts",
+  "main": "dist/Mapping.js",
+  "types": "dist/Mapping.d.ts",
   "scripts": {
+    "compiler": "tsc",
+    "build": "npm run compiler",
     "test": "jest"
   },
   "author": "Aquila Ziedins",

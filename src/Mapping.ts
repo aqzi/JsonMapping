@@ -26,7 +26,7 @@ export function json2Obj(json: string) {
 //Replace sets and maps to an object with identifier.
 function replacer(value: object): Record<string, any> | object{
     if(value instanceof Map){
-        let record: Record<string, any> = Object.fromEntries(value);
+        let record: Record<string, any> = Array.from(value.entries()).reduce((main, [key, value]) => ({...main, [key]: value}), {});
         record[identifiers.Map] = true;
         return record;
     } else if(value instanceof Set) {
