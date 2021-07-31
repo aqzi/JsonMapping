@@ -1,4 +1,4 @@
-import { json2Obj, obj2Json } from '../mappings/MapToRecord';
+import { json2Obj, obj2Json } from './Mapping';
 
 test('Map conversion in json', () => {
     interface TestObject {

@@ -1,12 +1,12 @@
 {
-  "name": "jsonmapping",
+  "name": "@aqzi/jsonmapping",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Convert json to and from (nested) maps and sets",
+  "main": "src/Mapping.ts",
   "scripts": {
     "test": "jest"
   },
-  "author": "",
+  "author": "Aquila Ziedins",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.14.8",
@@ -19,5 +19,13 @@
     "ts-jest": "^27.0.4",
     "typescript": "^4.3.5"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aqzi/JsonMapping.git"
+  },
+  "bugs": {
+    "url": "https://github.com/aqzi/JsonMapping/issues"
+  },
+  "homepage": "https://github.com/aqzi/JsonMapping.git#readme"
 }
