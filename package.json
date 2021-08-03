@@ -1,6 +1,6 @@
 {
   "name": "@aqzi/jsonmapping",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Convert json to and from (nested) maps and sets",
   "main": "dist/Mapping.js",
   "types": "dist/Mapping.d.ts",
