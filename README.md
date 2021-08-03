@@ -1,26 +1,35 @@
 # JsonMapping
 Convert json to and from (nested) maps and sets
 
-## Map/Set --> Json
+## Installation
+```
+npm i @aqzi/jsonmapping
+```
+
+## Usage
+
+### Map/Set --> Json
 The mapper function adds an identifier to the map and set objects.
-When the parameter noIdentifier is true, it will convert the map to an object and the set will be a list.
+When the parameter noIdentifier is true (default is false), it will convert the map to an object and the set will be a list.
 (Json.stringify would transform a map to an empty object.)
 
 Map --> json:
-```
-{test: new Map(['😀', 1], ['👻', 2])} 
---> (Mapping)
-{"test":{"😀":1,"👻":2,"_map_":true}}
+```typescript
+obj2Json({test: new Map(['😀', 1], ['👻', 2])})
+@return: {"test":{"😀":1,"👻":2,"_map_":true}}
+
+//with noIdentifier = true:
+obj2Json({test: new Map(['😀', 1], ['👻', 2])}, true)
+@return: {"test":{"😀":1,"👻":2}}
 ```
 
 Set --> json:
-```
-{test: new Set([1,2,3])} 
---> (Mapping)
-{"test":{"_set_":[1,2,3]}}
+```typescript
+obj2Json({test: new Set([1,2,3])})
+@return: {"test":{"_set_":[1,2,3]}}
 ```
 
-## Json --> Map/Set
+### Json --> Map/Set
 The package provides two ways to reconstruct maps and sets correctly.
 1) identifiers: If the json contains identifiers it will automaticly perform the transformation.
 2) keysToConvert: You can specify some keys belonging to objects that should be converted.
@@ -28,7 +37,7 @@ The package provides two ways to reconstruct maps and sets correctly.
     to a map. If the json contains multiple objects with the same key than all those objects will be converted
     if that key was specified. Following code gives an example.
 
-```
+```typescript
 json2Obj(dataAsJson, {Map: ['🐔', '🐷'], Set: ['😺']})
 ```
 
