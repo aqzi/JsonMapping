@@ -1,5 +1,5 @@
 # JsonMapping
-Convert json to and from (nested) maps and sets
+Convert json to and from (nested) maps and sets.
 
 ## Installation
 ```

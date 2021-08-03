@@ -33,7 +33,10 @@
   "homepage": "https://github.com/aqzi/JsonMapping.git#readme",
   "keywords": [
     "json",
-    "mapper",
-    "transformer"
+    "mapping",
+    "map2Json",
+    "set2Json",
+    "Json2Map",
+    "Json2Set"
   ]
 }
